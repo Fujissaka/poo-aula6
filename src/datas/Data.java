@@ -23,9 +23,7 @@ public class Data {
     int ano;
 
     boolean anoBissexto(int ano) {
-        if (ano < 0) {
-            throw new IllegalArgumentException("Ano deve ser positivo");
-        }
+        validaAno(ano);
         // not divisible by 4, not a leap year
         if (ano % 4 != 0) {
             return false;
@@ -48,6 +46,12 @@ public class Data {
         return false;
     }
 
+    void validaAno(int ano) {
+        if (ano < 0 || ano > 2999) {
+            throw new IllegalArgumentException("Ano deve estar em [0,2999]");
+        }
+    }
+
     Data(int dia, int mes, int ano) {
         if (dia < 1 || dia > 31) {
             throw new IllegalArgumentException("Dia deve estar em [1,31]");
@@ -55,9 +59,7 @@ public class Data {
         if (mes < 1 || mes > 12) {
             throw new IllegalArgumentException("Mes deve estar em [1,12]");
         }
-        if (ano < 0) {
-            throw new IllegalArgumentException("Valor invalido para o ano");
-        }
+        validaAno(ano);
         if (dia == 31 && !testaMes31(mes)) {
             throw new IllegalArgumentException(
                 String.format("%s nao tem 31 dias", MESES[mes]));
