@@ -1,8 +1,5 @@
-## Template para projetos Java no GitHub Codespaces
+## Exercícios de projeto de classes
 
-Esse repositório contém um template para projetos Java no GitHub Codespaces. 
-
-Procedimento sugerido para gerar um novo projeto:
-
-1. Crie um novo repositório a partir desse template (por exemplo, crie um "fork" desse repositório).
-2. A partir do repositório criado, clique em "Code", aba "Codespaces" e depois em "New codespace".
+* Biblioteca: Modelo de livros e bibliotecas
+* Data: Modelo de data do calendário
+* Retangulo: Modelo geométrico de retângulo
